@@ -13,7 +13,6 @@ class App extends React.Component {
     return (
       <div>
         <div className="calculator-body">
-          <h1>Math Margician</h1>
           <Calculator />
         </div>
       </div>

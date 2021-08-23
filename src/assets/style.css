@@ -4,6 +4,7 @@
     grid-template-rows: repeat(6, 1fr);
     margin-right: 40%;
     margin-left: 40%;
+    padding-top: 60px;
 }
 
 result {
@@ -16,5 +17,9 @@ result {
 }
 
 .operators {
-    background-color: rgb(236, 143, 109);
+    background-color: rgb(221, 152, 88);
+}
+
+.button {
+    align-content: center;
 }
