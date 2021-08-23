@@ -10,6 +10,9 @@
 .result {
   grid-column: 1/5;
   background-color: rgb(180, 170, 170);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: right;
 }
 
 #zero {
@@ -18,8 +21,11 @@
 
 .operators {
   background-color: rgb(221, 152, 88);
+  min-width: 100px;
 }
 
 .button {
   align-content: center;
+  min-height: 70px;
+  min-width: 100px;
 }
