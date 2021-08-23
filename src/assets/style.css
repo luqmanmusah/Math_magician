@@ -10,8 +10,8 @@
 .result {
   grid-column: 1/5;
   background-color: rgb(180, 170, 170);
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: right;
 }
 
