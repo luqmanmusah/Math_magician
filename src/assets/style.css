@@ -1,0 +1,16 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+result {
+    grid-column: 1/5;
+}
+
+#zero {
+    grid-column: 1/3;
+}
