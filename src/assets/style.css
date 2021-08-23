@@ -12,7 +12,11 @@
   background-color: rgb(180, 170, 170);
   margin-top: 0;
   margin-bottom: 0;
-  text-align: right;
+  font-size: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  color: white;
 }
 
 #zero {
