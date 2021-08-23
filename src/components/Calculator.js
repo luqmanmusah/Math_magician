@@ -10,7 +10,7 @@ class Calculator extends React.Component {
 
     render = () => (
       <div className="grid container max-width-sm">
-        <result value={0} />
+        <p value={0} className="result">0</p>
         <button name="AC" type="button" className="button">AC</button>
         <button name="+/-" type="button" className="button">+/-</button>
         <button name="%" type="button" className="button">%</button>
