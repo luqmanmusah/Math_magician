@@ -1,13 +1,22 @@
 # Math Magician
 
-This is the first project of the Math Magicians application. I will set up the environment and tools needed to develop a React application. In the following projects, I will develop the actual application.
+This is the first project of the Math Magicians application. I will set up the environment and tools needed to develop a React application. In the following projects, I will develop the actual application. I added, a React component that will hold the core functionality: a calculator.
 
+![math](https://user-images.githubusercontent.com/22328716/130453058-f213bd89-5728-418e-bf05-586434ccdc69.png)
+
+## Additions
+
+- Created a directory called components.
+- Inside components, I created a new Calculator.js file.
+- In Calculator.js, created a React component that matches this design UI.
+- Once the Calculator was ready, I imported it and use it in my main component (App.js).
+- Test it in the browser; it renders without problems.
+- I used class components.
 
 ## Setting up my React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![react](https://user-images.githubusercontent.com/22328716/129612492-73ec21c3-0088-4227-9320-4b01dbf37a84.png)
 ## Available Scripts
 
 In the project directory, you can run:
