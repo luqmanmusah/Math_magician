@@ -6,12 +6,9 @@ This is the first project of the Math Magicians application. I will set up the e
 
 ## Additions
 
-- Created a directory called components.
-- Inside components, I created a new Calculator.js file.
-- In Calculator.js, created a React component that matches this design UI.
-- Once the Calculator was ready, I imported it and use it in my main component (App.js).
-- Test it in the browser; it renders without problems.
-- I used class components.
+- Imported the Calculate.js and Operate.js in the Calculator component.
+- Implemented the event handlers I needed to use the math logic from calculator.js and operate.js in your React component.
+- Practice what I have learned until now: use state and props, pass props to child components, use lifecycle methods, lift state up.
 
 ## Setting up my React App
 
