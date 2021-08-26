@@ -5,8 +5,7 @@ import Calculator from './components/Calculator';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
