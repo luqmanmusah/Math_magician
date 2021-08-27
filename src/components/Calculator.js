@@ -1,23 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Result from './result';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+
+export default function Calculator() {
+  const [state, setState] = useState({
       next: null,
       total: null,
-    };
-    this.Handler = this.Handler.bind(this);
+  });
+
+  const Handler = (event) => {
+    const newState = event.target.getAttribute('name');
+    setState(calculate(state, newState));
   }
 
-  Handler(event) {
-    this.setState((state) => calculate(state, event.target.getAttribute('name')));
-  }
-
-  render() {
-    const { next, total } = this.state;
+    const { next, total } = state;
     return (
       <div className="grid container max-width-sm">
         <Result className="result" result={next || (total || '0')} />
@@ -47,6 +44,3 @@ class Calculator extends React.Component {
       </div>
     );
   }
-}
-
-export default Calculator;
