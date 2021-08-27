@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import calculate from '../logic/calculate';
 import Result from './result';
 
@@ -7,12 +7,16 @@ export default function Calculator() {
     next: null,
     total: null,
   });
+  const [name, setName] = useState(null);
 
   const Handler = (event) => {
-    const newState = event.target.getAttribute('name');
-    setState(calculate(state, newState));
+    const name = event.target.getAttribute('name');
+    setState((prevState) => {...prevState});
+    setName(name);
   };
-
+  useEffect(() => {
+    calculate(state, name);
+  }, [state]);
   const { next, total } = state;
   return (
     <div className="grid container max-width-sm">
