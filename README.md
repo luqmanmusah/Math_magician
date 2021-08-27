@@ -6,9 +6,6 @@ This is the first project of the Math Magicians application. I will set up the e
 
 ## Additions
 
-- Imported the Calculate.js and Operate.js in the Calculator component.
-- Implemented the event handlers I needed to use the math logic from calculator.js and operate.js in your React component.
-- Practice what I have learned until now: use state and props, pass props to child components, use lifecycle methods, lift state up.
 - Refacted the Calculator component (components/Calculator.js) from a class based component to a functional component with hooks.
 
 ## Setting up my React App
