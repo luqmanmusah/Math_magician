@@ -17,6 +17,7 @@ class App extends React.Component {
 
       <>
         <Navbar />
+        <h1>Maths Magician</h1>
         <Switch>
           <div>
 
@@ -25,6 +26,9 @@ class App extends React.Component {
             </Route>
             <Route path="/calculator">
               <div className="calculator-body">
+                <p>
+                  {' Lets do some Maths!' }
+                </p>
                 <Calculator />
               </div>
             </Route>
