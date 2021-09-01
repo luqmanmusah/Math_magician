@@ -1,4 +1,3 @@
-/* eslint-disable prefer-template */
 import operate from './operate';
 
 function isNumber(item) {
@@ -30,9 +29,9 @@ export default function calculate(obj, buttonName) {
     // If there is an operation, update next
     if (obj.operation) {
       if (obj.next) {
-        return { next: obj.next + buttonName };
+        return { next: obj.next + buttonName, operation: obj.operation, total: obj.total };
       }
-      return { next: buttonName };
+      return { next: buttonName, operation: obj.operation, total: obj.total };
     }
     // If there is no operation, update next and clear the value
     if (obj.next) {
@@ -52,19 +51,18 @@ export default function calculate(obj, buttonName) {
       if (obj.next.includes('.')) {
         return {};
       }
-      // eslint-disable-next-line prefer-template
-      return { next: obj.next + '.' };
+      return { next: `${obj.next}.`, total: obj.total, operation: obj.operation };
     }
     if (obj.operation) {
-      return { next: '0.' };
+      return { next: '0.', operation: obj.operation, total: obj.total };
     }
     if (obj.total) {
       if (obj.total.includes('.')) {
         return {};
       }
-      return { total: obj.total + '.' };
+      return { total: `${obj.total}.`, operation: obj.operation };
     }
-    return { total: '0.' };
+    return { next: '0.', operation: obj.operation, total: obj.total };
   }
 
   if (buttonName === '=') {
@@ -90,12 +88,10 @@ export default function calculate(obj, buttonName) {
   }
 
   // Button must be an operation
-
-  // When the user presses an operation button without having entered
-  // a number first, do nothing.
-  // if (!obj.next && !obj.total) {
-  //   return {};
-  // }
+  // When the user presses an operation button without having entered a number first, do nothing.
+  if (!obj.next && !obj.total) {
+    return {};
+  }
 
   // User pressed an operation button and there is an existing operation
   if (obj.operation) {
@@ -110,7 +106,7 @@ export default function calculate(obj, buttonName) {
 
   // The user hasn't typed a number yet, just save the operation
   if (!obj.next) {
-    return { operation: buttonName };
+    return { operation: buttonName, total: obj.total };
   }
 
   // save the operation and shift 'next' into 'total'
