@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line arrow-body-style
 const Quotes = () => {
   return (
-    <div>
+    <div className="quote-message">
       <h3>
         Without mathematics, there’s nothing you can do.
         Everything around you is mathematics.

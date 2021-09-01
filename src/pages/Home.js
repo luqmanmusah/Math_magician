@@ -4,7 +4,8 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>
+    <div className="home-message">
+      <h2>Welcome To The Home Page!</h2>
       <p>An electronic calculator is typically a portable electronic device used to perform
         calculations,
         ranging from basic arithmetic to complex mathematics.

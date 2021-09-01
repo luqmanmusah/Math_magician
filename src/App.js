@@ -17,7 +17,6 @@ class App extends React.Component {
 
       <>
         <Navbar />
-        <h1>Maths Magician</h1>
         <Switch>
           <div>
 

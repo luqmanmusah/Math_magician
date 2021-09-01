@@ -22,6 +22,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="navBar">
+      <h1>Maths Magician</h1>
       <ul>
         {links.map((link) => {
           return (
