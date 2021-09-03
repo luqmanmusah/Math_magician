@@ -1,25 +1,19 @@
-import Big from 'big.js';
-// import operate from './test-files/operate';
+import operate from './test-files/operate';
 
-describe('operation', (numberOne, numberTwo, operation) => {
-  const one = Big(numberOne);
-  const two = Big(numberTwo);
+describe('operation', () => {
   test('Addition', () => {
-    if (operation === '+') expect(one.plus(two)).toBe('');
+    expect(operate(1, 2, '+')).toBe('3');
   });
   test('Subtration', () => {
-    if (operation === '-') expect(one.minus(two)).toBe('');
+    expect(operate(3, 2, '-')).toBe('1');
   });
   test('Multiplication', () => {
-    if (operation === 'x')expect(one.times(two)).toBe('');
+    expect(operate(1, 2, 'x')).toBe('2');
   });
   test('Division', () => {
-    if (operation === '÷') expect(one.div(two)).toBe('');
+    expect(operate(1, 2, '÷')).toMatch('0.5');
   });
   test('Module', () => {
-    if (operation === '÷') expect(one.mod(two)).toBe('');
-  });
-  test('For Error', () => {
-    if (operation === '') expect().toBe(`Unknown operation '${operation}'`);
+    expect(operate(4, 2, '%')).toBe('0');
   });
 });
