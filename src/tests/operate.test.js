@@ -1,5 +1,5 @@
 import Big from 'big.js';
-import operate from './test-files/operate';
+// import operate from './test-files/operate';
 
 describe('operation', (numberOne, numberTwo, operation) => {
   const one = Big(numberOne);
